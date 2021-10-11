@@ -94,7 +94,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Нажата ячейка /(self.data[indexPath.section][indexPath.row].text)/")
+        print("Нажата ячейка \(self.data[indexPath.section][indexPath.row].text)")
     }
 }
 
