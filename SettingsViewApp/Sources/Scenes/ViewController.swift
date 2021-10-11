@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     private var data = [[CellData(text: "Mobile network", accessoryType: .disclosureIcon, iconName: "antenna.radiowaves.left.and.right", backgroundColor: .green)]]
 
     private lazy var tableView: UITableView = {
-        return UITableView(frame: .zero, style: .grouped)
+        var table = UITableView(frame: .zero, style: .grouped)
+        table.allowsSelection = true;
+
+        return table
     }()
 
     // MARK: - Lifecycle
@@ -26,8 +29,9 @@ class ViewController: UIViewController {
 
     private func setupHierarchy() {
         self.view.addSubview(tableView)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: Metrics.cellIdentifier)
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     private func setupLayout() {
@@ -46,7 +50,7 @@ class ViewController: UIViewController {
 
     // MARK: - Private methods
     private func updateLayout(with size: CGSize) {
-        self.tableView.frame = CGRect.init(origin: .zero, size: size)
+        self.tableView.frame = CGRect(origin: .zero, size: size)
     }
 }
 
@@ -60,7 +64,7 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: Metrics.cellIdentifier, for: indexPath) as! TableViewCell
 
         let cellData = self.data[indexPath.section][indexPath.row]
         setCellData(cellData, for: cell)
@@ -88,12 +92,9 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(self.data[indexPath.section][indexPath.row].text)
-    }
 
-    func  tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(self.data[indexPath.section][indexPath.row].text)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Нажата ячейка /(self.data[indexPath.section][indexPath.row].text)/")
     }
 }
 
@@ -103,6 +104,8 @@ extension ViewController {
         static let backgroundColor: UIColor = .white
 
         static let settingsTitle: String = "Settings"
+
+        static let cellIdentifier: String = "TableViewCell"
 
         static let cellImageCornerRadius = 5
     }
