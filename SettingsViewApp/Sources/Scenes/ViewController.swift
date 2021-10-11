@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var data = [[CellData(text: "Mobile network", accessoryType: .disclosureIcon, iconName: "antenna.radiowaves.left.and.right", backgroundColor: .green)]]
+    private var data = [[CellData(text: "Airplane mode", accessoryType: .switchButton, iconName: "airplane", backgroundColor: .orange),
+                         CellData(text: "Mobile network", accessoryType: .disclosureIcon, iconName: "antenna.radiowaves.left.and.right", backgroundColor: .green)]]
 
     private lazy var tableView: UITableView = {
         var table = UITableView(frame: .zero, style: .grouped)
@@ -86,9 +87,20 @@ extension ViewController: UITableViewDataSource {
         case .disclosureIcon:
             cell.accessoryType = .disclosureIndicator
             break
+        case .switchButton:
+            let switchView = UISwitch(frame: .zero)
+            switchView.setOn(false, animated: true)
+            switchView.tag = cell.hash // for detect which row switch Changed
+            switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
+            cell.accessoryView = switchView
+            break
         }
     }
 
+    @objc func switchChanged(_ sender : UISwitch!) {
+        print("table row switch Changed \(sender.tag)")
+        print("The switch is \(sender.isOn ? "ON" : "OFF")")
+    }
 }
 
 extension ViewController: UITableViewDelegate {
