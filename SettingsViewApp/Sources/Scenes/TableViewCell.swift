@@ -8,12 +8,10 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
-
-
     override func prepareForReuse() {
         super.prepareForReuse()
 
         self.accessoryType = .none
+        self.accessoryView = nil
     }
 }

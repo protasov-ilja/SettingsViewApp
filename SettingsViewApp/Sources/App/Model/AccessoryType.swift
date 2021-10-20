@@ -9,4 +9,5 @@ import Foundation
 
 public enum AccessoryType {
     case disclosureIcon
+    case switchButton
 }
