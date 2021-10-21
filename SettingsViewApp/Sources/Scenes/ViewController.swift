@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var data = [[CellData(text: "Airplane mode", accessoryType: .switchButton, iconName: "airplane", backgroundColor: .orange),
-                         CellData(text: "Mobile network", accessoryType: .disclosureIcon, iconName: "antenna.radiowaves.left.and.right", backgroundColor: .green)]]
+    private var data = [SectionData(cells: [
+        .switchCell(withData: SwitchCellData(text: "Airplane mode", iconName: "airplane", iconBackgroundColor: .orange, isOnByDefault: true)),
+        .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .green))
+    ]), ]
 
     private lazy var tableView: UITableView = {
         var table = UITableView(frame: .zero, style: .grouped)
+        table.register(TableViewDefaultCell.self, forCellReuseIdentifier: TableViewDefaultCell.identifier)
+        table.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
         table.allowsSelection = true;
 
         return table
@@ -29,10 +33,10 @@ class ViewController: UIViewController {
     }
 
     private func setupHierarchy() {
-        self.view.addSubview(tableView)
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: Metrics.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.frame = view.bounds
+        self.view.addSubview(tableView)
     }
 
     private func setupLayout() {
@@ -51,7 +55,7 @@ class ViewController: UIViewController {
 
     // MARK: - Private methods
     private func updateLayout(with size: CGSize) {
-        self.tableView.frame = CGRect(origin: .zero, size: size)
+        self.tableView.frame = view.bounds
     }
 }
 
@@ -61,52 +65,45 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data[section].count
+        return self.data[section].cells.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: Metrics.cellIdentifier, for: indexPath) as! TableViewCell
+        let cellData = data[indexPath.section].cells[indexPath.row]
 
-        let cellData = self.data[indexPath.section][indexPath.row]
-        setCellData(cellData, for: cell)
+        switch cellData {
+        case .defaultCell(let cellData):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewDefaultCell.identifier, for: indexPath) as? TableViewDefaultCell else {
+                return UITableViewCell()
+            }
 
-        return cell
-    }
+            cell.configure(with: cellData)
 
-    private func setCellData(_ cellData: CellData, for cell: TableViewCell) {
-        cell.textLabel?.text = cellData.text
+            return cell
+        case .switchCell(let cellData):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SwitchTableViewCell.identifier, for: indexPath) as? SwitchTableViewCell else {
+                return UITableViewCell()
+            }
 
-        let imageView = cell.imageView!
-        imageView.image = UIImage(systemName: cellData.iconName)?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        imageView.layer.masksToBounds = false
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = CGFloat(Metrics.cellImageCornerRadius)
-        imageView.backgroundColor = cellData.backgroundColor
+            cell.configure(with: cellData)
 
-        switch cellData.accessoryType {
-        case .disclosureIcon:
-            cell.accessoryType = .disclosureIndicator
-            break
-        case .switchButton:
-            let switchView = UISwitch(frame: .zero)
-            switchView.setOn(false, animated: true)
-            switchView.tag = cell.hash // for detect which row switch Changed
-            switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
-            cell.accessoryView = switchView
-            break
+            return cell
         }
-    }
-
-    @objc func switchChanged(_ sender : UISwitch!) {
-        print("table row switch Changed \(sender.tag)")
-        print("The switch is \(sender.isOn ? "ON" : "OFF")")
     }
 }
 
 extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Нажата ячейка \(self.data[indexPath.section][indexPath.row].text)")
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let type = self.data[indexPath.section].cells[indexPath.row]
+        switch type {
+        case .defaultCell(let cellData):
+            print("Нажата ячейка \(cellData.text)")
+        case .switchCell(let cellData):
+            print("Нажата ячейка \(cellData.text)")
+        }
     }
 }
 
@@ -116,8 +113,6 @@ extension ViewController {
         static let backgroundColor: UIColor = .white
 
         static let settingsTitle: String = "Settings"
-
-        static let cellIdentifier: String = "TableViewCell"
 
         static let cellImageCornerRadius = 5
     }
