@@ -20,6 +20,8 @@
 		DF3FB258271367F600054072 /* DefaultCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FB257271367F600054072 /* DefaultCellData.swift */; };
 		DF3FB25C2713685800054072 /* AccessoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FB25B2713685800054072 /* AccessoryType.swift */; };
 		DF97F0062722080E006DFE96 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */; };
+		DF97F00D27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */; };
+		DF97F0112722107E006DFE96 /* DisclosureTextCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		DF3FB257271367F600054072 /* DefaultCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCellData.swift; sourceTree = "<group>"; };
 		DF3FB25B2713685800054072 /* AccessoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryType.swift; sourceTree = "<group>"; };
 		DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureButtonTableViewCell.swift; sourceTree = "<group>"; };
+		DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureTextCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			children = (
 				DF3FB257271367F600054072 /* DefaultCellData.swift */,
 				DF16CD162720AC58003E8A9F /* SwitchCellData.swift */,
+				DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */,
 			);
 			path = CellsData;
 			sourceTree = "<group>";
@@ -65,6 +70,7 @@
 			children = (
 				DF3FB24B271357AE00054072 /* TableViewDefaultCell.swift */,
 				DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */,
+				DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -233,12 +239,14 @@
 				DF3FB25C2713685800054072 /* AccessoryType.swift in Sources */,
 				DF322F1027120E910002AE80 /* ViewController.swift in Sources */,
 				DF16CD172720AC58003E8A9F /* SwitchCellData.swift in Sources */,
+				DF97F0112722107E006DFE96 /* DisclosureTextCellData.swift in Sources */,
 				DF3FB24C271357AE00054072 /* TableViewDefaultCell.swift in Sources */,
 				DF16CD132720AAEC003E8A9F /* CellType.swift in Sources */,
 				DF322F0C27120E910002AE80 /* AppDelegate.swift in Sources */,
 				DF3FB258271367F600054072 /* DefaultCellData.swift in Sources */,
 				DF97F0062722080E006DFE96 /* SwitchTableViewCell.swift in Sources */,
 				DF16CD0F2720A6FE003E8A9F /* SectionData.swift in Sources */,
+				DF97F00D27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift in Sources */,
 				DF322F0E27120E910002AE80 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
