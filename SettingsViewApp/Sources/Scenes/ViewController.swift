@@ -11,10 +11,22 @@ class ViewController: UIViewController {
 
     private var data = [SectionData(cells: [
         .switchCell(withData: SwitchCellData(text: "Airplane mode", iconName: "airplane", iconBackgroundColor: .orange, isOnByDefault: true)),
+        .disclosureTextCell(withData: DisclosureTextCellData(text: "Wi-Fi", disclosureText: "Not connected", iconName: "wifi", iconBackgroundColor: .link)),
         .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link)),
-        .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .green)),
-        .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link))
-    ]), ]
+        .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .systemGreen)),
+        .defaultCell(withData: DefaultCellData(text: "Personal hotspot", iconName: "personalhotspot", iconBackgroundColor: .green)),
+        .switchCell(withData: SwitchCellData(text: "VPN", iconName: "airplane", iconBackgroundColor: .orange, isOnByDefault: true)),
+    ]), SectionData(cells: [
+        .defaultCell(withData: DefaultCellData(text: "Notifications", iconName: "square", iconBackgroundColor: .red)),
+        .defaultCell(withData: DefaultCellData(text: "Sounds & Haptics", iconName: "speaker.wave.3.fill", iconBackgroundColor: .systemPink)),
+        .defaultCell(withData: DefaultCellData(text: "Do Not Disturb", iconName: "moon.fill", iconBackgroundColor: .systemPurple)),
+        .defaultCell(withData: DefaultCellData(text: "Screen time", iconName: "hourglass", iconBackgroundColor: .systemPurple)),
+    ]), SectionData(cells: [
+        .defaultCell(withData: DefaultCellData(text: "General", iconName: "gear", iconBackgroundColor: .gray)),
+        .defaultCell(withData: DefaultCellData(text: "Display & Brightness", iconName: "textformat.size", iconBackgroundColor: .systemBlue)),
+        .defaultCell(withData: DefaultCellData(text: "Battry", iconName: "battery.100", iconBackgroundColor: .systemGreen)),
+        .defaultCell(withData: DefaultCellData(text: "Privacy", iconName: "hand.raised.fill", iconBackgroundColor: .systemBlue)),
+    ])]
 
     private lazy var tableView: UITableView = {
         var table = UITableView(frame: .zero, style: .grouped)
