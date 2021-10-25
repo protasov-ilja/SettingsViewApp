@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF16CD0F2720A6FE003E8A9F /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16CD0E2720A6FE003E8A9F /* SectionData.swift */; };
+		DF16CD132720AAEC003E8A9F /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16CD122720AAEC003E8A9F /* CellType.swift */; };
+		DF16CD172720AC58003E8A9F /* SwitchCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16CD162720AC58003E8A9F /* SwitchCellData.swift */; };
 		DF322F0C27120E910002AE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0B27120E910002AE80 /* AppDelegate.swift */; };
-		DF322F0E27120E910002AE80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0D27120E910002AE80 /* SceneDelegate.swift */; };
 		DF322F1027120E910002AE80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0F27120E910002AE80 /* ViewController.swift */; };
 		DF322F1327120E910002AE80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF322F1127120E910002AE80 /* Main.storyboard */; };
 		DF322F1527120E9D0002AE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF322F1427120E9D0002AE80 /* Assets.xcassets */; };
 		DF322F1827120E9D0002AE80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF322F1627120E9D0002AE80 /* LaunchScreen.storyboard */; };
+		DF3FB24C271357AE00054072 /* TableViewDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FB24B271357AE00054072 /* TableViewDefaultCell.swift */; };
+		DF3FB258271367F600054072 /* DefaultCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FB257271367F600054072 /* DefaultCellData.swift */; };
+		DF3FB25C2713685800054072 /* AccessoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FB25B2713685800054072 /* AccessoryType.swift */; };
+		DF97F0062722080E006DFE96 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */; };
+		DF97F00D27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */; };
+		DF97F0112722107E006DFE96 /* DisclosureTextCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF16CD0E2720A6FE003E8A9F /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		DF16CD122720AAEC003E8A9F /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		DF16CD162720AC58003E8A9F /* SwitchCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellData.swift; sourceTree = "<group>"; };
 		DF322F0827120E910002AE80 /* SettingsViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingsViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF322F0B27120E910002AE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF322F0D27120E910002AE80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF322F0F27120E910002AE80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF322F1227120E910002AE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF322F1427120E9D0002AE80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF322F1727120E9D0002AE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF322F1927120E9D0002AE80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF3FB24B271357AE00054072 /* TableViewDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDefaultCell.swift; sourceTree = "<group>"; };
+		DF3FB257271367F600054072 /* DefaultCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCellData.swift; sourceTree = "<group>"; };
+		DF3FB25B2713685800054072 /* AccessoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryType.swift; sourceTree = "<group>"; };
+		DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureButtonTableViewCell.swift; sourceTree = "<group>"; };
+		DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureTextCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF16CD152720AC2D003E8A9F /* CellsData */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FB257271367F600054072 /* DefaultCellData.swift */,
+				DF16CD162720AC58003E8A9F /* SwitchCellData.swift */,
+				DF97F0102722107E006DFE96 /* DisclosureTextCellData.swift */,
+			);
+			path = CellsData;
+			sourceTree = "<group>";
+		};
+		DF16CD1C2720B21C003E8A9F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FB24B271357AE00054072 /* TableViewDefaultCell.swift */,
+				DF97F0052722080E006DFE96 /* SwitchTableViewCell.swift */,
+				DF97F00C27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		DF322EFF27120E910002AE80 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +92,75 @@
 		DF322F0A27120E910002AE80 /* SettingsViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				DF322F0B27120E910002AE80 /* AppDelegate.swift */,
-				DF322F0D27120E910002AE80 /* SceneDelegate.swift */,
-				DF322F0F27120E910002AE80 /* ViewController.swift */,
-				DF322F1127120E910002AE80 /* Main.storyboard */,
-				DF322F1427120E9D0002AE80 /* Assets.xcassets */,
-				DF322F1627120E9D0002AE80 /* LaunchScreen.storyboard */,
 				DF322F1927120E9D0002AE80 /* Info.plist */,
+				DF3FB2482713575D00054072 /* Sources */,
+				DF3FB2462713572A00054072 /* Resources */,
+				DF322F1427120E9D0002AE80 /* Assets.xcassets */,
 			);
 			path = SettingsViewApp;
+			sourceTree = "<group>";
+		};
+		DF3FB245271356F700054072 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DF322F1627120E9D0002AE80 /* LaunchScreen.storyboard */,
+				DF322F1127120E910002AE80 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DF3FB2462713572A00054072 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FB245271356F700054072 /* Storyboards */,
+				DF3FB2472713574000054072 /* Configs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF3FB2472713574000054072 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		DF3FB2482713575D00054072 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FB24A2713576F00054072 /* Scenes */,
+				DF3FB2492713576700054072 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DF3FB2492713576700054072 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FB256271367E500054072 /* Model */,
+				DF322F0B27120E910002AE80 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DF3FB24A2713576F00054072 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DF16CD1C2720B21C003E8A9F /* Cells */,
+				DF322F0F27120E910002AE80 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DF3FB256271367E500054072 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF16CD152720AC2D003E8A9F /* CellsData */,
+				DF3FB25B2713685800054072 /* AccessoryType.swift */,
+				DF16CD0E2720A6FE003E8A9F /* SectionData.swift */,
+				DF16CD122720AAEC003E8A9F /* CellType.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +233,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3FB25C2713685800054072 /* AccessoryType.swift in Sources */,
 				DF322F1027120E910002AE80 /* ViewController.swift in Sources */,
+				DF16CD172720AC58003E8A9F /* SwitchCellData.swift in Sources */,
+				DF97F0112722107E006DFE96 /* DisclosureTextCellData.swift in Sources */,
+				DF3FB24C271357AE00054072 /* TableViewDefaultCell.swift in Sources */,
+				DF16CD132720AAEC003E8A9F /* CellType.swift in Sources */,
 				DF322F0C27120E910002AE80 /* AppDelegate.swift in Sources */,
-				DF322F0E27120E910002AE80 /* SceneDelegate.swift in Sources */,
+				DF3FB258271367F600054072 /* DefaultCellData.swift in Sources */,
+				DF97F0062722080E006DFE96 /* SwitchTableViewCell.swift in Sources */,
+				DF16CD0F2720A6FE003E8A9F /* SectionData.swift in Sources */,
+				DF97F00D27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
