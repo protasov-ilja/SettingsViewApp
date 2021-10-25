@@ -11,7 +11,6 @@
 		DF16CD132720AAEC003E8A9F /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16CD122720AAEC003E8A9F /* CellType.swift */; };
 		DF16CD172720AC58003E8A9F /* SwitchCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF16CD162720AC58003E8A9F /* SwitchCellData.swift */; };
 		DF322F0C27120E910002AE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0B27120E910002AE80 /* AppDelegate.swift */; };
-		DF322F0E27120E910002AE80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0D27120E910002AE80 /* SceneDelegate.swift */; };
 		DF322F1027120E910002AE80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF322F0F27120E910002AE80 /* ViewController.swift */; };
 		DF322F1327120E910002AE80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF322F1127120E910002AE80 /* Main.storyboard */; };
 		DF322F1527120E9D0002AE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF322F1427120E9D0002AE80 /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 		DF16CD162720AC58003E8A9F /* SwitchCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellData.swift; sourceTree = "<group>"; };
 		DF322F0827120E910002AE80 /* SettingsViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingsViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF322F0B27120E910002AE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF322F0D27120E910002AE80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DF322F0F27120E910002AE80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF322F1227120E910002AE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF322F1427120E9D0002AE80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			children = (
 				DF3FB256271367E500054072 /* Model */,
 				DF322F0B27120E910002AE80 /* AppDelegate.swift */,
-				DF322F0D27120E910002AE80 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				DF97F0062722080E006DFE96 /* SwitchTableViewCell.swift in Sources */,
 				DF16CD0F2720A6FE003E8A9F /* SectionData.swift in Sources */,
 				DF97F00D27220FCE006DFE96 /* DisclosureButtonTableViewCell.swift in Sources */,
-				DF322F0E27120E910002AE80 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
