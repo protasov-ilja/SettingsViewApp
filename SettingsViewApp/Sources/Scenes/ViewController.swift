@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     private var data = [SectionData(cells: [
         .switchCell(withData: SwitchCellData(text: "Airplane mode", iconName: "airplane", iconBackgroundColor: .orange, isOnByDefault: true)),
+        .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link)),
         .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .green)),
         .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link))
     ]), ]
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
     }
 
