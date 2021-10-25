@@ -11,13 +11,16 @@ class ViewController: UIViewController {
 
     private var data = [SectionData(cells: [
         .switchCell(withData: SwitchCellData(text: "Airplane mode", iconName: "airplane", iconBackgroundColor: .orange, isOnByDefault: true)),
-        .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .green))
+        .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link)),
+        .defaultCell(withData: DefaultCellData(text: "Mobile network", iconName: "antenna.radiowaves.left.and.right", iconBackgroundColor: .green)),
+        .disclosureTextCell(withData: DisclosureTextCellData(text: "Bluetooth", disclosureText: "On", iconName: "bluetooth", iconBackgroundColor: .link))
     ]), ]
 
     private lazy var tableView: UITableView = {
         var table = UITableView(frame: .zero, style: .grouped)
         table.register(TableViewDefaultCell.self, forCellReuseIdentifier: TableViewDefaultCell.identifier)
         table.register(SwitchTableViewCell.self, forCellReuseIdentifier: SwitchTableViewCell.identifier)
+        table.register(DisclosureButtonTableViewCell.self, forCellReuseIdentifier: DisclosureButtonTableViewCell.identifier)
         table.allowsSelection = true;
 
         return table
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
     }
 
@@ -88,6 +91,14 @@ extension ViewController: UITableViewDataSource {
             cell.configure(with: cellData)
 
             return cell
+        case .disclosureTextCell(let cellData):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DisclosureButtonTableViewCell.identifier, for: indexPath) as? DisclosureButtonTableViewCell else {
+                return UITableViewCell()
+            }
+
+            cell.configure(with: cellData)
+
+            return cell
         }
     }
 }
@@ -102,6 +113,8 @@ extension ViewController: UITableViewDelegate {
         case .defaultCell(let cellData):
             print("Нажата ячейка \(cellData.text)")
         case .switchCell(let cellData):
+            print("Нажата ячейка \(cellData.text)")
+        case .disclosureTextCell(let cellData):
             print("Нажата ячейка \(cellData.text)")
         }
     }

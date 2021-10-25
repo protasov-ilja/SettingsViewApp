@@ -8,4 +8,5 @@
 enum CellType {
     case defaultCell(withData: DefaultCellData)
     case switchCell(withData: SwitchCellData)
+    case disclosureTextCell(withData: DisclosureTextCellData)
 }
